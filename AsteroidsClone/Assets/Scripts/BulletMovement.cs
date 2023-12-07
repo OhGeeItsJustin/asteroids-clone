@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed;
+
     void Start()
     {
-        
+        speed = 10f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Move forward using relative upward-facing direction
+        Vector3 moveBullet = new Vector3();
+        moveBullet += transform.up * speed;
+        transform.position += moveBullet * Time.deltaTime;
     }
 }
