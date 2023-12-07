@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public float speed = 3f;
     public float rotationSpeed = 160; // Degrees per second
 
     void Start()
@@ -30,6 +31,18 @@ public class CharacterMovement : MonoBehaviour
 
         float currentZ = transform.rotation.eulerAngles.z;
         transform.rotation = Quaternion.Euler(0, 0, currentZ + angle * Time.deltaTime);
+
+        // Move forward using relative upward-facing direction
+        bool moveForward = Input.GetKey(KeyCode.UpArrow);
+
+        Vector3 moveCharacter = new Vector3();
+
+        if(moveForward)
+        {
+            moveCharacter += transform.up * speed;
+        }
+
+        transform.position += moveCharacter * Time.deltaTime;
 
     }
 }
