@@ -9,22 +9,22 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
         // Depending on if right or left arrow keys are pressed change the rotation
-        bool rotateCW = Input.GetKey(KeyCode.RightArrow);
-        bool rotateCCW = Input.GetKey(KeyCode.LeftArrow);
+        bool doRotateCW = Input.GetKey(KeyCode.RightArrow);
+        bool doRrotateCCW = Input.GetKey(KeyCode.LeftArrow);
 
         float angle = 0;
 
-        if(rotateCW)
+        if (doRotateCW)
         {
             angle -= rotationSpeed;
         }
-        if(rotateCCW)
+        if (doRrotateCCW)
         {
             angle += rotationSpeed;
         }
@@ -33,11 +33,11 @@ public class CharacterMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, currentZ + angle * Time.deltaTime);
 
         // Move forward using relative upward-facing direction
-        bool moveForward = Input.GetKey(KeyCode.UpArrow);
+        bool doMoveForward = Input.GetKey(KeyCode.UpArrow);
 
         Vector3 moveCharacter = new Vector3();
 
-        if(moveForward)
+        if (doMoveForward)
         {
             moveCharacter += transform.up * speed;
         }
