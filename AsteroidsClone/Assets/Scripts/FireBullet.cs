@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class FireBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public GameObject bullet;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // If space bar is pressed create bullet gameobject
+        bool doFireBullet = Input.GetKeyDown(KeyCode.Space);
+
+        if (doFireBullet)
+        {
+            // Give bullet the players position
+            Vector3 position = transform.position;
+            GameObject gobj = Instantiate(bullet, position, Quaternion.identity);
+
+            // Give bullet the players rotation
+            float currentZ = transform.rotation.eulerAngles.z;
+            gobj.transform.rotation = Quaternion.Euler(0, 0, currentZ);
+
+            // Display to screen
+            gobj.SetActive(true);
+        }
     }
 }
