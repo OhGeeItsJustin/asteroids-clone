@@ -7,11 +7,6 @@ public class FireBullet : MonoBehaviour
 
     public GameObject bullet;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         // If space bar is pressed create bullet gameobject

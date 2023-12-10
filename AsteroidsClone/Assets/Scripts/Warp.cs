@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Warp : MonoBehaviour
 {
+    // When objects collide set the colliding object to opposite side of screen 
     [field: SerializeField] public Vector3 Offset { get; set; }
     private void OnTriggerEnter2D(Collider2D collider2D)
     {

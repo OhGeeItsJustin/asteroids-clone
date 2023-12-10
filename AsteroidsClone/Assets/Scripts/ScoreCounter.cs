@@ -8,8 +8,8 @@ public class ScoreCounter : MonoBehaviour
     public TMP_Text scoreDisplay;
     public LifeCounter lifeCounter;
     private int score = 0;
-    //public LifeCounter lifeCounter;
 
+    // Function to add to score when an asteroid is destroyed 
     public void AddToScore(int points)
     {
         score += points;
@@ -17,15 +17,15 @@ public class ScoreCounter : MonoBehaviour
 
     }
 
-    // If player score is divisible by 5000 add a live
-    void Update()
-    {
-        if(score > 0)
-        {
-            if(score % 500 == 0) 
-            {
-                lifeCounter.AddToLives();
-            }
-        }
-    }
+    //// If player score is divisible by 5000 add a live
+    //void Update()
+    //{
+    //    if(score > 0)
+    //    {
+    //        if(score % 500 == 0) 
+    //        {
+    //            lifeCounter.AddToLives();
+    //        }
+    //    }
+    //}
 }

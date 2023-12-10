@@ -10,9 +10,10 @@ public class LifeCounter : MonoBehaviour
     public TMP_Text scoreDisplay;
     private int life = 3;
 
+    // Function to add lives
     public void AddToLives()
     {
-        if(life > 6) 
+        if(life < 6) 
         {
             life++;
         }
@@ -23,11 +24,13 @@ public class LifeCounter : MonoBehaviour
     {
         return life;
     }
+
     public void MinusLife()
     {
         life--;
         scoreDisplay.text = $"Lives: {life} ";
     }
+
     void Start()
     {
         scoreDisplay.text = $"Lives: {life} ";

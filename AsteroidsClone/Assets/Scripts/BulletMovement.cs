@@ -6,6 +6,7 @@ public class BulletMovement : MonoBehaviour
 {
     public float speed;
 
+    // Add force to bullet
     void Start()
     {
         speed = 10f;

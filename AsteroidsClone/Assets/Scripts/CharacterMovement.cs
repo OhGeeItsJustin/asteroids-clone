@@ -8,11 +8,6 @@ public class CharacterMovement : MonoBehaviour
     public float speed = 3f;
     public float rotationSpeed = 160; // Degrees per second
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         // Depending on if right or left arrow keys are pressed change the rotation
@@ -47,6 +42,7 @@ public class CharacterMovement : MonoBehaviour
 
     }
 
+    // If character is hit by asteroid and still has lives reset in middle of screen else destory player character
     public void CharacterReset()
     {
         lifeCounter.MinusLife();

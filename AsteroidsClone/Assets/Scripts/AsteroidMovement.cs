@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AsteroidMovement : MonoBehaviour
 {
+    // Add force to asteroids
     public float speed;
-    // Start is called before the first frame update
     void Start()
     {
         speed = 1f;

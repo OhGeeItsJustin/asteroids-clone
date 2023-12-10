@@ -8,6 +8,8 @@ public class LargeAsteroid : MonoBehaviour
     public ScoreCounter scoreCounter;
     public CharacterMovement character;
     public int pointsToAdd = 20;
+
+    // Give large asteroid random spawn location and rotation
     void Start()
     {
         float x = Random.Range(-9f, 9f);
@@ -15,14 +17,13 @@ public class LargeAsteroid : MonoBehaviour
         transform.position = new Vector3(x, y, 0);
         float randomRotation = Random.Range(0, 360);
 
-        // Give bullet the players rotation
         float currentZ = transform.rotation.eulerAngles.z;
         transform.rotation = Quaternion.Euler(0, 0, currentZ + randomRotation);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        // If collision with bullet add points, destory bullet and split asteroid
         if (collision.gameObject.CompareTag("bullet") )
         {
             scoreCounter.AddToScore(pointsToAdd);
@@ -30,6 +31,7 @@ public class LargeAsteroid : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        // If collision with player add points, reset player position and split asteroid
         if (collision.gameObject.CompareTag("Player"))
         {
             character.CharacterReset();
@@ -38,14 +40,12 @@ public class LargeAsteroid : MonoBehaviour
         }
     }
 
+    // Create two new medium asteroid and destory large asteroid
     void SplitLargeAsteroid()
     {
-        // Give bullet the players position
         Vector3 position = transform.position;
         GameObject mediumAsteroidOne = Instantiate(mediumAsteroid, position, Quaternion.identity);
         GameObject mediumAsteroidTwo = Instantiate(mediumAsteroid, position, Quaternion.identity);
-
-        // Display to screen
         mediumAsteroidOne.SetActive(true);
         mediumAsteroidTwo.SetActive(true);
 
