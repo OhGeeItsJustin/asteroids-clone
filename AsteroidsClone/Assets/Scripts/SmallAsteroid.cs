@@ -17,8 +17,11 @@ public class SmallAsteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SplitSmallAsteroid();
-        Destroy(collision.gameObject);
+        if (!collision.gameObject.CompareTag("asteroid"))
+        {
+            SplitSmallAsteroid();
+            Destroy(collision.gameObject);
+        }
     }
 
     void SplitSmallAsteroid()

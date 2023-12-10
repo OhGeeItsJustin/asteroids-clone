@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: 0, y: -13, z: 0}
+  <Offset>k__BackingField: {x: 0, y: -14, z: 0}
 --- !u!61 &993285810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: 0, y: 13, z: 0}
+  <Offset>k__BackingField: {x: 0, y: 14, z: 0}
 --- !u!212 &1031652129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 1032012871}
   m_Layer: 0
   m_Name: LargeAsteroid
-  m_TagString: Untagged
+  m_TagString: asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: 21, y: 0, z: 0}
+  <Offset>k__BackingField: {x: 20, y: 0, z: 0}
 --- !u!212 &1051751055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1163,11 +1163,11 @@ GameObject:
   - component: {fileID: 1142522642}
   - component: {fileID: 1142522645}
   - component: {fileID: 1142522644}
-  - component: {fileID: 1142522647}
   - component: {fileID: 1142522646}
+  - component: {fileID: 1142522647}
   m_Layer: 0
   m_Name: SmallAsteroid
-  m_TagString: Untagged
+  m_TagString: asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: -21, y: 0, z: 0}
+  <Offset>k__BackingField: {x: -20, y: 0, z: 0}
 --- !u!212 &1191892496
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1702,7 +1702,7 @@ GameObject:
   - component: {fileID: 1779644193}
   m_Layer: 0
   m_Name: LargeAsteroid
-  m_TagString: Untagged
+  m_TagString: asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1878,7 +1878,7 @@ GameObject:
   - component: {fileID: 1781585246}
   m_Layer: 0
   m_Name: LargeAsteroid
-  m_TagString: Untagged
+  m_TagString: asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2089,7 +2089,7 @@ GameObject:
   - component: {fileID: 1800883328}
   m_Layer: 0
   m_Name: LargeAsteroid
-  m_TagString: Untagged
+  m_TagString: asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 2087502930}
   m_Layer: 0
   m_Name: MediumAsteroid
-  m_TagString: Untagged
+  m_TagString: asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

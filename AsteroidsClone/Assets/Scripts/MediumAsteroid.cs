@@ -17,8 +17,11 @@ public class MediumAsteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SplitMediumAsteroid();
-        Destroy(collision.gameObject);
+        if (!collision.gameObject.CompareTag("asteroid"))
+        {
+            SplitMediumAsteroid();
+            Destroy(collision.gameObject);
+        }
     }
 
     void SplitMediumAsteroid()

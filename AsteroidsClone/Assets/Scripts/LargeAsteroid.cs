@@ -19,8 +19,11 @@ public class LargeAsteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SplitLargeAsteroid();
-        Destroy(collision.gameObject);
+        if (!collision.gameObject.CompareTag("asteroid"))
+        {
+            SplitLargeAsteroid();
+            Destroy(collision.gameObject);
+        }
     }
 
     void SplitLargeAsteroid()
