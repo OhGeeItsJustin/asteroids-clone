@@ -12,6 +12,6 @@ public class BulletMovement : MonoBehaviour
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.AddForce(transform.up * speed, ForceMode2D.Impulse);
 
-        Destroy(gameObject, (float)0.2);
+        Destroy(gameObject, (float)0.8);
     }
 }

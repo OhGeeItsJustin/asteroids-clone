@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: -20, y: -20, z: 0}
+  <Offset>k__BackingField: {x: 0, y: -12, z: 0}
 --- !u!61 &993285810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: -20, y: -20, z: 0}
+  <Offset>k__BackingField: {x: 0, y: 12, z: 0}
 --- !u!212 &1031652129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: -20, y: -20, z: 0}
+  <Offset>k__BackingField: {x: 20, y: 0, z: 0}
 --- !u!212 &1051751055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: -20, y: -20, z: 0}
+  <Offset>k__BackingField: {x: -20, y: 0, z: 0}
 --- !u!212 &1191892496
 SpriteRenderer:
   m_ObjectHideFlags: 0
