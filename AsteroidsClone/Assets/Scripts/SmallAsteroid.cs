@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SmallAsteroid : MonoBehaviour
 {
+    public GameObject largeAsteroid;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,14 @@ public class SmallAsteroid : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void SplitSmallAsteroid()
+    {
+        // Give bullet the players position
+        Vector3 position = transform.position;
+        GameObject newLargeAsteroid = Instantiate(largeAsteroid, position, Quaternion.identity);
+
+        Destroy(gameObject);
     }
 }
