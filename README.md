@@ -1,19 +1,19 @@
 # asteroids-clone
-Assignment 5 for Game Development Foundations
+Assignment 5 for Game Development Foundations</br>
 
 
 [<-] (left) & [->] (right) arrow keys used to rotate character.
 
 [↑] (Up) arrow key used to move character forward.
 
-[Space] space bar used to fire bullets.
+[Space] space bar used to fire bullets. </br>
 
 
 Player has 3 lives.
 
 If player hits an asteroid they lose a life.
 
-If character has 0 lives game is over.
+If character has 0 lives game is over. </br>
 
 
 4 large asteroids spawn on top half of map.
