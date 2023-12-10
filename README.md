@@ -2,7 +2,7 @@
 Assignment 5 for Game Development Foundations
 
 [<-] (left) & [->] (right) arrow keys used to rotate character.
-[↑] (Up) arrow key used to move character forward.
+.[↑] (Up) arrow key used to move character forward.
 [Space] space bar used to fire bullets.
 
 Player has 3 lives.
