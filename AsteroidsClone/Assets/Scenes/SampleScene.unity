@@ -623,7 +623,7 @@ Transform:
   m_GameObject: {fileID: 993285806}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 6.79, z: 0}
+  m_LocalPosition: {x: 0.05, y: 8.78, z: 0}
   m_LocalScale: {x: 20.075, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: 0, y: -12, z: 0}
+  <Offset>k__BackingField: {x: 0, y: -13, z: 0}
 --- !u!61 &993285810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: 0, y: 12, z: 0}
+  <Offset>k__BackingField: {x: 0, y: 13, z: 0}
 --- !u!212 &1031652129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ Transform:
   m_GameObject: {fileID: 1031652126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -6.85, z: 0}
+  m_LocalPosition: {x: -0.1, y: -8.92, z: 0}
   m_LocalScale: {x: 20.075, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -844,13 +844,14 @@ GameObject:
   - component: {fileID: 1032012867}
   - component: {fileID: 1032012869}
   - component: {fileID: 1032012870}
+  - component: {fileID: 1032012871}
   m_Layer: 0
   m_Name: LargeAsteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1032012866
 Transform:
   m_ObjectHideFlags: 0
@@ -979,6 +980,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1032012871
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032012865}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1051751052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: 20, y: 0, z: 0}
+  <Offset>k__BackingField: {x: 21, y: 0, z: 0}
 --- !u!212 &1051751055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1117,7 +1145,7 @@ Transform:
   m_GameObject: {fileID: 1051751052}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7075826, w: 0.70663065}
-  m_LocalPosition: {x: -10.73, y: 0.1, z: 0}
+  m_LocalPosition: {x: -12.49, y: 0.1, z: 0}
   m_LocalScale: {x: 13.808372, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1135,6 +1163,8 @@ GameObject:
   - component: {fileID: 1142522642}
   - component: {fileID: 1142522645}
   - component: {fileID: 1142522644}
+  - component: {fileID: 1142522647}
+  - component: {fileID: 1142522646}
   m_Layer: 0
   m_Name: SmallAsteroid
   m_TagString: Untagged
@@ -1234,7 +1264,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e11854360b894d88d35c5c7ea235b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  largeAsteroid: {fileID: 0}
+  largeAsteroid: {fileID: 1779644187}
+--- !u!50 &1142522646
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142522641}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1142522647
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142522641}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1191892493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38273241625e7409a378178f0132a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Offset>k__BackingField: {x: -20, y: 0, z: 0}
+  <Offset>k__BackingField: {x: -21, y: 0, z: 0}
 --- !u!212 &1191892496
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1373,7 +1465,7 @@ Transform:
   m_GameObject: {fileID: 1191892493}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7061382, w: 0.70807403}
-  m_LocalPosition: {x: 10.94, y: -0.15, z: 0}
+  m_LocalPosition: {x: 12.86, y: -0.16, z: 0}
   m_LocalScale: {x: 14.120618, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1607,6 +1699,7 @@ GameObject:
   - component: {fileID: 1779644189}
   - component: {fileID: 1779644191}
   - component: {fileID: 1779644192}
+  - component: {fileID: 1779644193}
   m_Layer: 0
   m_Name: LargeAsteroid
   m_TagString: Untagged
@@ -1742,6 +1835,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1779644193
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779644187}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1781585240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,13 +1875,14 @@ GameObject:
   - component: {fileID: 1781585243}
   - component: {fileID: 1781585244}
   - component: {fileID: 1781585245}
+  - component: {fileID: 1781585246}
   m_Layer: 0
   m_Name: LargeAsteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1781585241
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1890,6 +2011,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1781585246
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781585240}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1787236298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,13 +2086,14 @@ GameObject:
   - component: {fileID: 1800883324}
   - component: {fileID: 1800883326}
   - component: {fileID: 1800883327}
+  - component: {fileID: 1800883328}
   m_Layer: 0
   m_Name: LargeAsteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1800883323
 Transform:
   m_ObjectHideFlags: 0
@@ -2073,6 +2222,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1800883328
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800883322}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1857373789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,6 +2463,8 @@ GameObject:
   - component: {fileID: 2087502925}
   - component: {fileID: 2087502928}
   - component: {fileID: 2087502927}
+  - component: {fileID: 2087502929}
+  - component: {fileID: 2087502930}
   m_Layer: 0
   m_Name: MediumAsteroid
   m_TagString: Untagged
@@ -2387,6 +2565,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smallAsteroid: {fileID: 1142522641}
+--- !u!50 &2087502929
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087502924}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &2087502930
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087502924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

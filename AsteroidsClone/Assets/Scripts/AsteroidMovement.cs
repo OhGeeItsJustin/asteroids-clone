@@ -8,14 +8,8 @@ public class AsteroidMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 2f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 moveBullet = new Vector3();
-        moveBullet += transform.up * speed;
-        transform.position += moveBullet * Time.deltaTime;
+        speed = 1f;
+        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody.AddForce(transform.up * speed, ForceMode2D.Impulse);
     }
 }
