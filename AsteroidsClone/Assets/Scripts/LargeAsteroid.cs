@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LargeAsteroid : MonoBehaviour
 {
-
+    public GameObject mediumAsteroid;
     void Start()
     {
         float x = Random.Range(-9f, 9f);
@@ -20,6 +20,20 @@ public class LargeAsteroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    void SplitLargeAsteroid()
+    {
+        // Give bullet the players position
+        Vector3 position = transform.position;
+        GameObject mediumAsteroidOne = Instantiate(mediumAsteroid, position, Quaternion.identity);
+        GameObject mediumAsteroidTwo = Instantiate(mediumAsteroid, position, Quaternion.identity);
+
+        // Display to screen
+        mediumAsteroidOne.SetActive(true);
+        mediumAsteroidTwo.SetActive(true);
+
+        Destroy(gameObject);
     }
 }
