@@ -17,10 +17,10 @@ public class LargeAsteroid : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, currentZ + randomRotation);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        SplitLargeAsteroid();
+        Destroy(collision.gameObject);
     }
 
     void SplitLargeAsteroid()

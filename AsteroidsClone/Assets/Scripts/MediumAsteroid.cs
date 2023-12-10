@@ -15,11 +15,12 @@ public class MediumAsteroid : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, currentZ + randomRotation);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        SplitMediumAsteroid();
+        Destroy(collision.gameObject);
     }
+
     void SplitMediumAsteroid()
     {
         // Give bullet the players position
