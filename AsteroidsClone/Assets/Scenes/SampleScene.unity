@@ -609,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1142522642
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1576,6 +1576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3481afd954c6e46a1d5807684d858d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smallAsteroid: {fileID: 1142522641}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
