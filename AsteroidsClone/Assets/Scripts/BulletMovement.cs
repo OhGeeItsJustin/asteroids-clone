@@ -9,13 +9,9 @@ public class BulletMovement : MonoBehaviour
     void Start()
     {
         speed = 10f;
-    }
+        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody.AddForce(transform.up * speed, ForceMode2D.Impulse);
 
-    void Update()
-    {
-        // Move forward using relative upward-facing direction
-        Vector3 moveBullet = new Vector3();
-        moveBullet += transform.up * speed;
-        transform.position += moveBullet * Time.deltaTime;
+        Destroy(gameObject, (float)0.2);
     }
 }

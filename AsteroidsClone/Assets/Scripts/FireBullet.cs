@@ -20,7 +20,7 @@ public class FireBullet : MonoBehaviour
         if (doFireBullet)
         {
             // Give bullet the players position
-            Vector3 position = transform.position;
+            Vector3 position = transform.position + transform.up;
             GameObject gobj = Instantiate(bullet, position, Quaternion.identity);
 
             // Give bullet the players rotation
