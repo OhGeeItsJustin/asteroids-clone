@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class MediumAsteroid : MonoBehaviour
 {
     public GameObject smallAsteroid;
     public ScoreCounter scoreCounter;
+    public CharacterMovement character;
     public int pointsToAdd = 50;
     // Start is called before the first frame update
     void Start()
@@ -19,11 +21,18 @@ public class MediumAsteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("asteroid"))
+        if (collision.gameObject.CompareTag("bullet"))
         {
             scoreCounter.AddToScore(pointsToAdd);
             SplitMediumAsteroid();
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            character.CharacterReset();
+            scoreCounter.AddToScore(pointsToAdd);
+            SplitMediumAsteroid();
         }
     }
 

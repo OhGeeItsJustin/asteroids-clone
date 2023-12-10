@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public LifeCounter lifeCounter;
     public float speed = 3f;
     public float rotationSpeed = 160; // Degrees per second
 
@@ -44,5 +45,18 @@ public class CharacterMovement : MonoBehaviour
 
         transform.position += moveCharacter * Time.deltaTime;
 
+    }
+
+    public void CharacterReset()
+    {
+        lifeCounter.MinusLife();
+        int lives = lifeCounter.GetLives();
+        if(lives > 0)
+        {
+            transform.position = Vector3.zero;
+        } else
+        {
+            Destroy(gameObject);
+        }
     }
 }

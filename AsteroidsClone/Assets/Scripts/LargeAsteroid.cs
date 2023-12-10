@@ -6,6 +6,7 @@ public class LargeAsteroid : MonoBehaviour
 {
     public GameObject mediumAsteroid;
     public ScoreCounter scoreCounter;
+    public CharacterMovement character;
     public int pointsToAdd = 20;
     void Start()
     {
@@ -22,11 +23,18 @@ public class LargeAsteroid : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (!collision.gameObject.CompareTag("asteroid"))
+        if (collision.gameObject.CompareTag("bullet") )
         {
             scoreCounter.AddToScore(pointsToAdd);
             SplitLargeAsteroid();
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            character.CharacterReset();
+            scoreCounter.AddToScore(pointsToAdd);
+            SplitLargeAsteroid();
         }
     }
 

@@ -6,6 +6,7 @@ using TMPro;
 public class ScoreCounter : MonoBehaviour
 {
     public TMP_Text scoreDisplay;
+    public LifeCounter lifeCounter;
     private int score = 0;
     //public LifeCounter lifeCounter;
 
@@ -21,9 +22,9 @@ public class ScoreCounter : MonoBehaviour
     {
         if(score > 0)
         {
-            if(score % 5000 == 0) 
+            if(score % 500 == 0) 
             {
-                //lifeCounter.AddToLives();
+                lifeCounter.AddToLives();
             }
         }
     }
