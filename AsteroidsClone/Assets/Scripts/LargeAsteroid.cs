@@ -5,6 +5,8 @@ using UnityEngine;
 public class LargeAsteroid : MonoBehaviour
 {
     public GameObject mediumAsteroid;
+    public ScoreCounter scoreCounter;
+    public int pointsToAdd = 20;
     void Start()
     {
         float x = Random.Range(-9f, 9f);
@@ -19,8 +21,10 @@ public class LargeAsteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (!collision.gameObject.CompareTag("asteroid"))
         {
+            scoreCounter.AddToScore(pointsToAdd);
             SplitLargeAsteroid();
             Destroy(collision.gameObject);
         }

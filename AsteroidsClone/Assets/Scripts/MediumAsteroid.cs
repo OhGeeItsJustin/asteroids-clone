@@ -5,6 +5,8 @@ using UnityEngine;
 public class MediumAsteroid : MonoBehaviour
 {
     public GameObject smallAsteroid;
+    public ScoreCounter scoreCounter;
+    public int pointsToAdd = 50;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class MediumAsteroid : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("asteroid"))
         {
+            scoreCounter.AddToScore(pointsToAdd);
             SplitMediumAsteroid();
             Destroy(collision.gameObject);
         }

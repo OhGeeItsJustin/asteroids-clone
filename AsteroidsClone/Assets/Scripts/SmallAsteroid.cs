@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SmallAsteroid : MonoBehaviour
 {
-    public GameObject largeAsteroid;
+    public GameObject aLargeAsteroid;
+    public ScoreCounter scoreCounter;
+    public int pointsToAdd = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class SmallAsteroid : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("asteroid"))
         {
+            scoreCounter.AddToScore(pointsToAdd);
             SplitSmallAsteroid();
             Destroy(collision.gameObject);
         }
@@ -28,7 +31,7 @@ public class SmallAsteroid : MonoBehaviour
     {
         // Give bullet the players position
         Vector3 position = transform.position;
-        GameObject newLargeAsteroid = Instantiate(largeAsteroid, position, Quaternion.identity);
+        GameObject largeAsteroid = Instantiate(aLargeAsteroid, position, Quaternion.identity);
 
         Destroy(gameObject);
     }

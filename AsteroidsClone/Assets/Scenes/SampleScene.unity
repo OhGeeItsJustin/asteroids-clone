@@ -851,7 +851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1032012866
 Transform:
   m_ObjectHideFlags: 0
@@ -880,6 +880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mediumAsteroid: {fileID: 2087502924}
+  scoreCounter: {fileID: 98277796}
+  pointsToAdd: 20
 --- !u!212 &1032012868
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1264,7 +1266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9e11854360b894d88d35c5c7ea235b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  largeAsteroid: {fileID: 1779644187}
+  aLargeAsteroid: {fileID: 1781585240}
+  scoreCounter: {fileID: 98277796}
+  pointsToAdd: 100
 --- !u!50 &1142522646
 Rigidbody2D:
   serializedVersion: 4
@@ -1735,6 +1739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mediumAsteroid: {fileID: 2087502924}
+  scoreCounter: {fileID: 98277796}
+  pointsToAdd: 20
 --- !u!212 &1779644190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1882,7 +1888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1781585241
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1963,6 +1969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mediumAsteroid: {fileID: 2087502924}
+  scoreCounter: {fileID: 98277796}
+  pointsToAdd: 20
 --- !u!114 &1781585244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1800883323
 Transform:
   m_ObjectHideFlags: 0
@@ -2122,6 +2130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mediumAsteroid: {fileID: 2087502924}
+  scoreCounter: {fileID: 98277796}
+  pointsToAdd: 20
 --- !u!212 &1800883325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2565,6 +2575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smallAsteroid: {fileID: 1142522641}
+  scoreCounter: {fileID: 98277796}
+  pointsToAdd: 50
 --- !u!50 &2087502929
 Rigidbody2D:
   serializedVersion: 4
