@@ -12,7 +12,7 @@ public class ScoreCounter : MonoBehaviour
     public void AddToScore(int points)
     {
         score += points;
-        scoreDisplay.text = $"Score: {score} ";
+        scoreDisplay.text = $"Score: {score:00000000} ";
 
     }
 
